@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>换换 · Swipe Demo（TRAE Friends 参考）</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <div class="stage">
+    <div class="badge">Point of delight · Swipe stack</div>
+    <div class="phone" id="app">
+      <div class="topbar">
+        <div class="brand">换<i>换</i></div>
+        <div class="filter"><b>附近 3km</b> · 全部分类 ▾</div>
+      </div>
+
+      <div class="deck">
+        <div class="chrome">
+          <button class="undo-fab" data-action="undo" aria-label="撤回" type="button">↺</button>
+          <div class="pager" data-pager>1/5</div>
+        </div>
+        <div class="stack" data-stack></div>
+        <div class="empty">
+          <div>
+            <h3>附近暂时刷完了</h3>
+            <p>调远一点距离，或者发布一件闲置再回来。</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="actions">
+        <button class="ab want" data-action="want" type="button" aria-label="想换">⇄</button>
+        <button class="ab" data-action="detail" type="button" aria-label="详情">⌃</button>
+        <button class="ab pass" data-action="pass" type="button" aria-label="跳过">✕</button>
+      </div>
+
+      <div class="dock">
+        <div class="ti on">换</div>
+        <div class="ti">逛</div>
+        <div class="plus">＋</div>
+        <div class="ti">消息</div>
+        <div class="ti">我</div>
+      </div>
+      <div class="toast" id="toast"></div>
+    </div>
+    <div class="hint-row">
+      <span>左滑 / ⇄ = <b>想换</b></span>
+      <span>右滑 / ✕ = <b>跳过</b></span>
+    </div>
+  </div>
+  <script src="./swipe-engine.js"></script>
+  <script src="./app.js"></script>
+</body>
+</html>
